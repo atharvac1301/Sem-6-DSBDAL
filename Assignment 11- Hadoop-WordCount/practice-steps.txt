@@ -1,0 +1,22 @@
+(Main Folder) 
+ass11 folder --> classes folder, input folder, wordcount.java file
+input folder --> textfile.txt file
+
+
+1. start-all.sh
+2. jps (check for Namenode and Datanode)
+3. export HADOOP_CLASSPATH=$(hadoop classpath)
+4. echo $HADOOP_CLASSPATH
+5. hadoop fs -mkdir /ass11
+6. hadoop fs -mkdir /ass11/input
+7. hadoop fs -put (Drag textfile.txt) /ass11/input
+8. cd ass11 (Path of Main Folder)
+
+9. javac -classpath "${HADOOP_CLASSPATH}" -d (Drag classes folder) (Drag wordcount.java file)
+10. jar -cvf wordcount.jar -C classes/ .
+
+11. hadoop jar (Drag wordcount.jar file) wordcount /ass11/input /ass11/output
+12. hadoop dfs -cat /ass11/output/*
+
+
+

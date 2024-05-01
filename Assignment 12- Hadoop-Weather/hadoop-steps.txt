@@ -22,9 +22,13 @@ javac -version
 
 7.cd (path of the Main_Folder)
 
-8.javac -classpath ${HADOOP_CLASSPATH} -d (drag the Classes folder) (drag the Program.java file)
+----------------------------------------------------------------------------------------------------
+
+8.javac -classpath "${HADOOP_CLASSPATH}" -d (drag the Classes folder) (drag the Program.java file)
 
 9.jar -cvf Name_of_Jar_File.jar -C Classes/ .
+
+-----------------------------------------------------------------------------------------------------
 
 10.hadoop jar (drag the Name_of_Jar_File.jar file) Program /Assignment_Name/Input /Assignment_Name/Output
 
