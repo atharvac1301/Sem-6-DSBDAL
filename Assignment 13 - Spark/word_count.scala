@@ -1,13 +1,12 @@
-val data=sc.textFile("word_count.txt")
+var data = sc.textFile("word_count.txt")
 data.collect;
 
-val splitdata = data.flatMap(line => line.split(" "));
+var splitdata = data.flatMap(line=>line.split(" "));
 splitdata.collect;
 
-val mapdata = splitdata.map(word => (word,1));
-mapdata.collect;
+var mapper = splitdata.map(word=>(word,1));
+mapper.collect;
 
-val reducedata = mapdata.reduceByKey(_+_);
-reducedata.collect;
-
+var reduce = mapper.reduceByKey(_+_);
+reduce.collect;
 
